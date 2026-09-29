@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Invitación al buffet Ámbar y Canela">
+  <title>Ámbar y Canela | Invitación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- =========================================================
+       1. PORTADA / HERO
+       Cambia aquí el nombre y la frase principal del evento.
+       ========================================================= -->
+  <header class="hero reveal">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Una celebración para compartir</p>
+      <h1>Ámbar <span>&</span> Canela</h1>
+      <p class="hero-subtitle">Buffet de temporada</p>
+      <div class="ornament">✦</div>
+      <p class="hero-note">Una tarde de sabores, aromas y momentos para recordar.</p>
+      <a href="#evento" class="button button-light">Abrir invitación</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. INTRODUCCIÓN
+         ========================================================= -->
+    <section class="section intro reveal">
+      <p class="eyebrow">Estás invitado</p>
+      <h2>Una mesa hecha para compartir</h2>
+      <p>
+        Te esperamos para disfrutar una experiencia gastronómica inspirada
+        en los tonos, aromas y sabores del otoño.
+      </p>
+    </section>
+
+    <!-- =========================================================
+         3. DATOS DEL EVENTO
+         Modifica la fecha ISO y los textos de fecha/hora/lugar.
+         El contador usa EVENT_DATE en js/app.js.
+         ========================================================= -->
+    <section id="evento" class="section event-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Reserva la fecha</p>
+        <h2>El momento</h2>
+      </div>
+
+      <div class="event-grid">
+        <article class="event-card reveal">
+          <span class="card-icon">01</span>
+          <h3>Fecha</h3>
+          <p>20 de noviembre de 2026</p>
+        </article>
+
+        <article class="event-card reveal">
+          <span class="card-icon">02</span>
+          <h3>Hora</h3>
+          <p>19:00 horas</p>
+        </article>
+
+        <article class="event-card reveal">
+          <span class="card-icon">03</span>
+          <h3>Lugar</h3>
+          <p>Universidad de Ciencias y Artes de Chiapas</p>
+        </article>
+      </div>
+
+      <!-- =======================================================
+           4. CONTADOR
+           ======================================================= -->
+      <div class="countdown reveal">
+        <p class="countdown-title">Faltan</p>
+        <div class="countdown-grid">
+          <div><strong id="days">00</strong><span>Días</span></div>
+          <div><strong id="hours">00</strong><span>Horas</span></div>
+          <div><strong id="minutes">00</strong><span>Minutos</span></div>
+          <div><strong id="seconds">00</strong><span>Segundos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. MENÚ
+         Agrega o elimina categorías según tu buffet.
+         ========================================================= -->
+    <section id="menu" class="section menu-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">La mesa</p>
+        <h2>Menú</h2>
+        <p>Una selección pensada para la temporada.</p>
+      </div>
+
+      <div class="menu-list">
+        <article class="menu-item reveal">
+          <span>01</span>
+          <div>
+            <h3>Entrada</h3>
+            <p>Ensalada de temporada · vinagreta de miel y especias.</p>
+          </div>
+        </article>
+
+        <article class="menu-item reveal">
+          <span>02</span>
+          <div>
+            <h3>Plato fuerte</h3>
+            <p>Selección de carnes y guarniciones de inspiración otoñal.</p>
+          </div>
+        </article>
+
+        <article class="menu-item reveal">
+          <span>03</span>
+          <div>
+            <h3>Guarniciones</h3>
+            <p>Arroz blanco · vegetales rostizados · papas especiadas.</p>
+          </div>
+        </article>
+
+        <article class="menu-item reveal">
+          <span>04</span>
+          <div>
+            <h3>Postres</h3>
+            <p>Repostería de temporada · canela · frutos rojos · chocolate.</p>
+          </div>
+        </article>
+
+        <article class="menu-item reveal">
+          <span>05</span>
+          <div>
+            <h3>Bebidas</h3>
+            <p>Infusiones, bebidas frías y opciones de temporada.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. CONFIRMACIÓN DE ASISTENCIA
+         Este formulario se conecta con api/rsvp.php.
+         ========================================================= -->
+    <section id="confirmar" class="section rsvp-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Tu lugar en la mesa</p>
+        <h2>Confirma tu asistencia</h2>
+        <p>Ayúdanos a preparar todo especialmente para ti.</p>
+      </div>
+
+      <form id="rsvpForm" class="rsvp-form reveal">
+        <label>
+          Nombre completo
+          <input type="text" name="nombre" required maxlength="100" placeholder="Tu nombre">
+        </label>
+
+        <label>
+          Correo electrónico
+          <input type="email" name="email" required maxlength="150" placeholder="correo@ejemplo.com">
+        </label>
+
+        <label>
+          Número de acompañantes
+          <select name="acompanantes">
+            <option value="0">Solo yo</option>
+            <option value="1">1 acompañante</option>
+            <option value="2">2 acompañantes</option>
+            <option value="3">3 acompañantes</option>
+            <option value="4">4 acompañantes</option>
+          </select>
+        </label>
+
+        <label>
+          ¿Asistirás?
+          <select name="asistencia" required>
+            <option value="si">Sí, ahí estaré</option>
+            <option value="no">No podré asistir</option>
+          </select>
+        </label>
+
+        <label>
+          Comentario (opcional)
+          <textarea name="comentario" rows="4" maxlength="500" placeholder="Alguna observación..."></textarea>
+        </label>
+
+        <button type="submit" class="button">Confirmar asistencia</button>
+        <p id="rsvpMessage" class="form-message"></p>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         7. UBICACIÓN / GOOGLE MAPS
+         Reemplaza el src del iframe por el código de inserción
+         que te dé Google Maps para tu ubicación exacta.
+         ========================================================= -->
+    <section id="ubicacion" class="section location-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Cómo llegar</p>
+        <h2>El lugar</h2>
+      </div>
+
+      <div class="map-wrapper reveal">
+        <iframe
+          title="Mapa de la ubicación del evento"
+          src="https://www.google.com/maps?q=Universidad%20de%20Ciencias%20y%20Artes%20de%20Chiapas%20Tuxtla%20Guti%C3%A9rrez&output=embed"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <a
+        class="button button-outline reveal"
+        href="https://www.google.com/maps/search/?api=1&query=Universidad+de+Ciencias+y+Artes+de+Chiapas+Tuxtla+Gutierrez"
+        target="_blank"
+        rel="noopener">
+        Abrir en Google Maps
+      </a>
+    </section>
+
+    <!-- =========================================================
+         8. GALERÍA DE RECUERDOS
+         Las imágenes se cargan desde api/upload.php y se
+         registran en la base de datos.
+         ========================================================= -->
+    <section id="galeria" class="section gallery-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Nuestros recuerdos</p>
+        <h2>Galería</h2>
+        <p>Después del evento podremos guardar aquí fotografías de la celebración.</p>
+      </div>
+
+      <form id="galleryForm" class="gallery-form reveal" enctype="multipart/form-data">
+        <label>
+          Tu nombre
+          <input type="text" name="nombre" maxlength="100" placeholder="Nombre">
+        </label>
+        <label>
+          Fotografía
+          <input type="file" name="foto" accept="image/jpeg,image/png,image/webp" required>
+        </label>
+        <button type="submit" class="button">Subir recuerdo</button>
+        <p id="galleryMessage" class="form-message"></p>
+      </form>
+
+      <div id="galleryGrid" class="gallery-grid">
+        <!-- Las fotografías se cargan automáticamente desde la API. -->
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. CIERRE
+         ========================================================= -->
+    <section class="section closing reveal">
+      <div class="ornament">✦</div>
+      <h2>Nos encantará compartir esta mesa contigo.</h2>
+      <p>Ámbar y Canela</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ámbar y Canela · Invitación digital</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
